@@ -1,12 +1,16 @@
 package br.com.nlj.userregister.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     @Id
@@ -26,5 +30,5 @@ public class User {
     private Long codBank;
 
     @Column(name = "DSC_BANK")
-    private Long descriptionBank;
+    private String descriptionBank;
 }
