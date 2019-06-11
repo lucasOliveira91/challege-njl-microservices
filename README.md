@@ -1,7 +1,11 @@
 # Challege NJL Microservices
 This repository there are two microservices one of them in nodejs and other in Java both can be build as image docker
 
-##Crud User
+## Installation
+```bash
+docker-compose up -d
+
+## Crud User
 Insert Json example:
 ```json
 {
