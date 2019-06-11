@@ -30,9 +30,17 @@ services:
 
   crud-bank:
     build:
-      context: ./crud-nul-bank
+      context: ./crud-bank
     ports:
       - 3600:3600
+    networks:
+      - net1
+
+  crud-user:
+    build:
+      context: ./user-register
+    ports:
+      - 8090:8090
     networks:
       - net1
 
