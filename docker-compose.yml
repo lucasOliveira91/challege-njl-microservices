@@ -1,0 +1,41 @@
+version: "3.7"
+services:
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: lucas
+      ME_CONFIG_BASICAUTH_PASSWORD: 123!
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: 123
+    links:
+      - mongo
+    networks:
+      - net1
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123
+      MONGODB_DATABASE: njl
+    ports:
+      - "27017:27017"
+    volumes:
+      - /home/data/db
+    networks:
+      - net1
+
+  crud-bank:
+    build:
+      context: ./crud-nul-bank
+    ports:
+      - 3600:3600
+    networks:
+      - net1
+
+networks: 
+    net1:
+      driver: bridge
