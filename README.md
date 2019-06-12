@@ -1,6 +1,12 @@
 # Challege NJL Microservices
 This repository there are two microservices one of them in nodejs and other in Java both can be build as image docker
 
+### This app constains the images:
+- api bank - nodejs
+- api user - java with spring-boot
+- mongodb
+- mongo express - the client interface for mongo
+
 ## Installation
 ```bash
 docker-compose up -d
