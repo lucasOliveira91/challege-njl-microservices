@@ -7,6 +7,12 @@ This repository there are two microservices one of them in nodejs and other in J
 - mongodb
 - mongo express - the client interface for mongo
 
+### What you need to build these apps
+- Docker engine
+- Docker Compose
+- Git
+- Google SDK (Optional) or access to Google cloud Platform
+
 ## Installation
 ```bash
 docker-compose up -d
